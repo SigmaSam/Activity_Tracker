@@ -9,7 +9,6 @@
   <%@group.each do |g|%>
     <div class="item_container">
       <%= image_tag g.icon,class:"item_icon", onerror:"this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
-      
       <div class="item_info"> 
         <%= link_to group_path(g) do%>        
           <h2><%=g.name%></h2>
@@ -36,3 +35,24 @@
     </div>     
   <%end%>
 </div>
+
+
+<div class="user_routines">
+  <div class="routine_container_one">
+    <p>Group</p>
+    <p>Activity</p>
+    <p>Hours</p>
+  </div>
+
+  <div class="routine_container" id="user_routines">
+
+    <% @routine.each do |f|%>
+      <% if f.id %>     
+        <p class="routine_item"><%= f.group.name%></p>
+        <p class="routine_item"><%= f.name%></p>
+        <p class="routine_item"><%= f.hours%></p>
+      <% end %>
+    <%end%>
+  </div>
+</div>
+
