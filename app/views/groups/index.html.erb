@@ -1,0 +1,38 @@
+<% flash.each do |type, msg| %>
+  <div class='alert'>
+    <%= msg %>
+  </div>
+<% end %>
+<h1 class="title_two"> Available Groups </h1>
+<%= link_to 'Create New Group', new_group_path, class:'create_button', id:'option_link' %>
+<div class="items_area">
+  <%@group.each do |g|%>
+    <div class="item_container">
+      <%= image_tag g.icon,class:"item_icon", onerror:"this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
+      
+      <div class="item_info"> 
+        <%= link_to group_path(g) do%>        
+          <h2><%=g.name%></h2>
+          <% if !g.routines.last.nil? %>
+              <p>Last Activity </p>
+              <p><%=g.routines.last.name%></p>
+              <p>By <%=g.routines.last.user.name%></p>
+              <p>During</p>
+              <p><%=g.routines.last.hours %> Hours </p>
+          <%end%>          
+        <%end%>
+      </div>
+        <% g.routines.last do |f|%>
+          <% if !f.nil? %>
+              <p>Last Activity </p>
+              <p><%=g.name%></p>
+              <p>By <%=f.name%></p>
+              <p>During</p>
+              <p><%=f.hours %> Hours </p>
+               <%= Group.find_by(params[:group_id]).id %>
+          <%end%>
+        <%end%>
+      </div>      
+    </div>     
+  <%end%>
+</div>

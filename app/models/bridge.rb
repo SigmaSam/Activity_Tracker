@@ -1,2 +1,5 @@
 class Bridge < ApplicationRecord
-end
+    belongs_to :routine
+    belongs_to :group
+  end
+  

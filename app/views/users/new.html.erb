@@ -1,0 +1,13 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%=form_with(model:@user,local:true) do |f|%>
+  <div class="title_two">Register</div>
+  <div class="input_container">
+    <%=f.text_field :name,autofocus:true,placeholder:"Your name here",class:'input_area' %>
+    <%=f.submit "Sign Up", class:'input_button'%>
+  </div>
+<%end%>

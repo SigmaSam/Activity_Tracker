@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ActivityTracker</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Activity Tracker</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" %>
   </head>
 
   <body>
+    <% if current_user.nil?  %>
+      <div class="home_container">
+        <%= link_to "Log In", log_in_path, class:"home_button"%>
+        <%= link_to "Sign Up", new_user_path, class:"home_button"%>
+      </div>
+    <% else %>
+      <div class="home_container">
+        <%= link_to "My Activities", user_path(current_user), class:"home_button"%>
+        <%= link_to "Groups", groups_path, class:"home_button"%>
+        <%= link_to "Log Out", sessions_path,method: :delete, class:"home_button"%>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,36 @@
+<div class="user_info_area">
+  <div class="user_container" >
+    <img src="https://myplantationdentist.com/wp-content/uploads/2016/10/blank_profile_female.jpg">
+    <h1 class=""> <%= current_user.name %> </h1>
+    <p>Total time spend in all activities.</p>
+    <p><%= total_hours_user %></p>
+  </div>
+  <div class="user_container" >
+
+     <% @groups.each do |g| %>
+     <% if g.routines.find_by(user_id: current_user.id) %>
+      <p class="group_name"> Total time Spend <%= g.name %> </p>
+        <%= total_hours_each(g) %>
+      <%end%>    
+    <%end%>
+  </div>
+</div>
+
+<div class="user_routines">
+  <div class="routine_container_one">
+    <p>Group</p>
+    <p>Activity</p>
+    <p>Hours</p>
+  </div>
+
+  <div class="routine_container" id="user_routines">
+
+    <% @user.routines.each do |f|%>
+      <% if f.id %>     
+        <p class="routine_item"><%= f.group.name%></p>
+        <p class="routine_item"><%= f.name%></p>
+        <p class="routine_item"><%= f.hours%></p>
+      <% end %>
+    <%end%>
+  </div>
+</div>

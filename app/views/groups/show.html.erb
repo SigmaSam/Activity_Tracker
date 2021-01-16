@@ -1,0 +1,29 @@
+<div class="items_area">
+  <div class="item_container" id="item_show">
+      <%= image_tag @group.icon,class:"item_icon", onerror:"this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
+    <h1 class="item_tittle"><%= @group.name %></h1>
+    <p class="item_text"> Total Hours</p>
+    <p class="item_text"><%= total_hours_group %></p>
+  </div>
+</div>
+
+<h2 class="title_two">What did you Acomplish?</h2>
+
+<%= render 'routines' %>
+
+<div class="routine_container_one">
+  <p>User</p>
+  <p>Activity</p>
+  <p>Hours</p>
+</div>
+
+<div class="routine_container">
+
+  <% @group.routines.each do |f|%>
+    <% if f.id %>     
+      <p class="routine_item"><%= f.user.name%></p>
+      <p class="routine_it em"><%= f.name%></p>
+      <p class="routine_item"><%= f.hours%></p>
+    <% end %>
+  <%end%>
+</div>

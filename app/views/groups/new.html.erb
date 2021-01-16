@@ -1,0 +1,16 @@
+  <h1 class="title_two">Create a New Group</h1>
+
+
+  <%=form_with(model:@group,local:true) do |f|%>
+  <div class="input_container">
+    <%= f.object.errors.full_messages.join(", ") if f.object.errors.any? %>
+
+    <%=f.text_field :name,required:true,autofocus:true,placeholder:"Name of the group",class:"input_area"%>
+
+    <%=f.text_field :icon,placeholder:"https://website.com/image.png",class:"input_area_two"%>
+    <%=f.submit "Save",class:"input_button"%>
+  <%end%>
+
+</div>
+
+<%= link_to 'Back To Groups', groups_path, class:'create_button', id:'return' %>
