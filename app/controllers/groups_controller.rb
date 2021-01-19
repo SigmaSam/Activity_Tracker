@@ -4,6 +4,7 @@ class GroupsController < ApplicationController
   def index
     @group = Group.all
     @routine = Routine.all
+    @user = User.all
   end
 
   def new

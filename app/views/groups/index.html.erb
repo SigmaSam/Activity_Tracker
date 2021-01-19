@@ -43,6 +43,7 @@
 <h1 class="title_two"> Last Registred Activities </h1>
 <div class="user_routines">
   <div class="routine_container_one">
+    <p>User</p>
     <p>Group</p>
     <p>Activity</p>
     <p>Hours</p>
@@ -51,8 +52,9 @@
   <div class="routine_container" id="user_routines">
 
     <% @routine.reverse.each do |f|%>
-      <% if f.id %>     
-        <p class="routine_item"><%= f.group.name%></p>
+      <% if f.id %>
+        <p class="routine_item"><%= @user.find_by(id: f.user_id).name%></p>     
+        <p class="routine_item"><%= f.group.name%></p>     
         <p class="routine_item"><%= f.name%></p>
         <p class="routine_item"><%= f.hours%></p>
       <% end %>
