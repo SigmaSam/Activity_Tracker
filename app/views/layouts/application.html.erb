@@ -11,6 +11,9 @@
   </head>
 
   <body>
+  <nav class="ham">
+  <label for="hamburger">&#9776;</label>
+  <input type="checkbox" id="hamburger"/>
     <% if current_user.nil?  %>
       <div class="home_container">
         <%= link_to "Log In", log_in_path, class:"home_button"%>
@@ -23,6 +26,7 @@
         <%= link_to "Log Out", sessions_path,method: :delete, class:"home_button"%>
       </div>
     <% end %>
+  </nav>
 
     <%= yield %>
   </body>
