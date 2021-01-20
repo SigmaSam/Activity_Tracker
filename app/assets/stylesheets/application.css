@@ -166,6 +166,7 @@ body {
   background: #edefee;
   border-radius: 1rem;
   min-width: 30vh;
+  align-self: flex-start;
 }
 
 .item_container:hover {
@@ -393,10 +394,10 @@ h1 {
   }
 
   .item_container {
-    flex-direction: row;
-    max-width: 100%;
+    flex-direction: row;  
     max-height: 3rem;
     margin-top: 0;
+    align-self: auto;
   }
 
   .item_icon {
