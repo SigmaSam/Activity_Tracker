@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_01_16_205902) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bridges", force: :cascade do |t|
-    t.integer "routine_id", null: false
-    t.integer "group_id", null: false
+    t.bigint "routine_id", null: false
+    t.bigint "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["group_id"], name: "index_bridges_on_group_id"
@@ -29,12 +32,12 @@ ActiveRecord::Schema.define(version: 2021_01_16_205902) do
   end
 
   create_table "routines", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.integer "hours"
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "group_id", null: false
+    t.bigint "group_id", null: false
     t.index ["group_id"], name: "index_routines_on_group_id"
     t.index ["user_id"], name: "index_routines_on_user_id"
   end
