@@ -26,7 +26,7 @@
     <% @group.routines.reverse.each do |f|%>
       <% if f.id %>     
         <p class="routine_item"><%= f.user.name%></p>
-        <p class="routine_it em"><%= f.name%></p>
+        <p class="routine_item"><%= f.name%></p>
         <p class="routine_item"><%= f.hours%></p>
       <% end %>
     <%end%>
