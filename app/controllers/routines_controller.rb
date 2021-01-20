@@ -8,7 +8,7 @@ class RoutinesController < ApplicationController
   end
 
   def new
-    @routine = Routine.create
+    @routine = Routine.new
   end
 
   def create
