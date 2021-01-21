@@ -55,7 +55,6 @@ group :test do
   gem 'database_cleaner'
   gem 'database_cleaner-active_record'
   gem 'rspec'
-  gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 4.0', require: false
 end
 

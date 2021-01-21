@@ -394,7 +394,7 @@ h1 {
   }
 
   .item_container {
-    flex-direction: row;  
+    flex-direction: row;
     max-height: 3rem;
     margin-top: 0;
     align-self: auto;
