@@ -4,7 +4,7 @@ This project is a simple app built using basic Ruby on Rails functionalities in 
 
 ![screenshot](app/assets/images/Index.png)
 ### Presentation on video
-[Video]()
+[Video](https://agile-depths-52362.herokuapp.com/)
 ### Built with
 - Ruby v2.7.0
 - Ruby on Rails 6.0.3.4
