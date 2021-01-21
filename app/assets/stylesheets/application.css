@@ -25,7 +25,7 @@ body {
 }
 
 .title {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   text-align: center;
   color: #fff;
   display: flex;
@@ -39,7 +39,7 @@ body {
 }
 
 .title_two {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   text-align: center;
   color: #fff;
   display: flex;
@@ -73,7 +73,7 @@ body {
   position: absolute;
   left: 15px;
   bottom: 15px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
 }
 
 .white-mode:hover {
@@ -93,7 +93,7 @@ body {
   background: #edefee;
   border: 0.1rem solid #aa210f;
   border-radius: 1rem 0 1rem 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -123,7 +123,7 @@ body {
 .input_button {
   background-color: #aa210f;
   border: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   font-size: 1rem;
   font-weight: bold;
   width: 78%;
@@ -132,7 +132,7 @@ body {
 }
 
 .create_button {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   font-size: 1rem;
   font-weight: bold;
   color: #edefee;
@@ -186,21 +186,21 @@ body {
   flex-direction: column;
   text-align: center;
   margin: 0 1rem 0 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   text-decoration: none;
   color: black;
   word-wrap: normal;
 }
 
 .item_tittle {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   border-top: 0.2rem solid #aa210f;
   margin-bottom: 0.2rem;
   word-wrap: normal;
 }
 
 .item_text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   color: black;
   margin: 0 0 1rem 0;
 }
@@ -221,13 +221,13 @@ body {
 }
 
 .routine_text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   text-align: center;
 }
 
 .routine_button {
   background-color: #aa210f;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   font-weight: bold;
   border: none;
   border-radius: 0 0 0.3rem 0.3rem;
@@ -237,7 +237,7 @@ body {
   display: flex;
   justify-content: space-around;
   background: #edefee;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   font-weight: bold;
   border-bottom: 0.2rem solid #41403c;
 }
@@ -248,7 +248,7 @@ body {
   grid-template-rows: repeat(3, auto);
   justify-content: space-around;
   background: #edefee;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   font-weight: bold;
   border-bottom: 3px solid #41403c;
 }
@@ -270,7 +270,7 @@ body {
   margin-bottom: -20rem;
   width: 40%;
   background-color: #edefee;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   border-bottom: 1rem solid #aa210f;
 }
 
@@ -312,7 +312,7 @@ h1 {
 }
 
 .home_button {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Proxima_Nova_Light', sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #edefee;
