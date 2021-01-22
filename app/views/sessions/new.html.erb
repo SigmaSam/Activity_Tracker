@@ -3,10 +3,12 @@
     <%= msg %>
   </div>
 <% end %>
-<div class="title_two">Log In</div>
-<%=form_with(url:sessions_path,method: "post",local:true) do |f|%>
-  <div class="input_container">
-    <%=f.text_field :name,autofocus:true,placeholder:"Your name here",class:'input_area' %>
-    <%=f.submit "Log In", class:'input_button'%>
-  </div>
-<%end%>
+<div class="information_area">
+  <h2 class="title_two">Log In</h2>
+  <%=form_with(url:sessions_path,method: "post",local:true) do |f|%>
+    <div class="input_container">
+      <%=f.text_field :name,autofocus:true,placeholder:"Your name here",class:'input_area' %>
+      <%=f.submit "Log In", class:'input_button'%>
+    </div>
+  <%end%>
+</div>
