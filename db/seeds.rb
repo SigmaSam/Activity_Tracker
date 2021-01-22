@@ -38,5 +38,50 @@ groups = Group.create([{
 }])
 
 routines = Routine.create([{
-
+    name: 'Push Ups',
+    hours: 1,
+    group_id: 2,
+    user_id: 1
+},
+{
+    name: 'Paperwork',
+    hours: 8,
+    group_id: 5,
+    user_id: 2 
+},
+{
+    name: 'Jogging',
+    hours: 4,
+    group_id: 2,
+    user_id: 2 
+},
+{
+    name: 'Plank',
+    hours: 5,
+    group_id: 2,
+    user_id: 2 
+},
+{
+    name: 'Weight Lifting',
+    hours: 4,
+    group_id: 2,
+    user_id: 3 
+},
+{
+    name: 'Coding Challenges',
+    hours: 1,
+    group_id: 3,
+    user_id: 2 
+},
+{
+    name: 'Sleeping',
+    hours: 8,
+    group_id: 1,
+    user_id: 1 
+},
+{
+    name: 'Spacing Out',
+    hours: 2,
+    group_id: 1,
+    user_id: 3 
 }])

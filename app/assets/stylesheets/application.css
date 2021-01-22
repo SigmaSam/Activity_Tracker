@@ -351,8 +351,6 @@ h1 {
   grid-template-columns: repeat(4, 1rem);
 }
 
-.field_with_errors {display: inline-block };
-
 @media screen and (max-width: 768px) {
   .ham label {
     display: inline-block;
@@ -394,7 +392,6 @@ h1 {
     justify-content: center;
     margin-top: 1rem;
   }
-
 
   .item_container {
     flex-direction: row;
