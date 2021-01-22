@@ -7,6 +7,7 @@
 <%= link_to 'Create New Group', new_group_path, class:'create_button', id:'option_link' %>
 <div class="items_area">
   <%@group.each do |g|%>
+  <% if g.id > 1 %>
     <div class="item_container">
       <%= image_tag g.icon,class:"item_icon", onerror:"this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
       <div class="item_info"> 
@@ -36,10 +37,13 @@
         <%end%>
       <%end%>
     </div>
+  <%end%>
   <%end%>        
 </div>     
+<h2 class="title_two">What did you Acomplish?</h2>
 
-</div>
+<%= render 'external' %>
+
 <h1 class="title_two"> Last Registred Activities </h1>
 <div class="user_routines">
   <div class="routine_container_one">
@@ -52,12 +56,15 @@
   <div class="routine_container" id="all_routines">
 
     <% @routine.reverse.each do |f|%>
-      <% if f.id %>
-        <p class="routine_item"><%= @user.find_by(id: f.user_id).name%></p>     
-        <p class="routine_item"><%= f.group.name%></p>     
+        <p class="routine_item"><%= @user.find_by(id: f.user_id).name%></p>
+        <% if f.group.id > 1  %>     
+          <p class="routine_item"><%= f.group.name%></p>
+        <%else%>
+          <p class="routine_item"> No group </p>
+        <% end %>     
         <p class="routine_item"><%= f.name%></p>
         <p class="routine_item"><%= f.hours%></p>
-      <% end %>
+      
     <%end%>
   </div>
 </div>

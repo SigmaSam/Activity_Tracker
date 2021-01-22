@@ -8,7 +8,7 @@
   <div class="user_container" >
 
      <% @groups.each do |g| %>
-     <% if g.routines.find_by(user_id: current_user.id) %>
+     <% if g.routines.find_by(user_id: current_user.id) && g.id != 1%>
       <p class="group_name"> Total time Spend <%= g.name %> </p>
         <%= total_hours_each(g) %>
       <%end%>    
@@ -25,8 +25,12 @@
   <div class="routine_container">
 
     <% @user.routines.reverse.each do |f|%>
-      <% if f.id %>     
-        <p class="routine_item"><%= f.group.name%></p>
+      <% if f.group_id %>
+        <% if f.group_id > 1%>
+          <p class="routine_item"><%= f.group.name%></p>
+        <%else%>
+          <p class="routine_item">No group</p>
+        <%end%>
         <p class="routine_item"><%= f.name%></p>
         <p class="routine_item"><%= f.hours%></p>
       <% end %>

@@ -165,7 +165,7 @@ body {
   margin: 1rem;
   background: #edefee;
   border-radius: 1rem;
-  min-width: 30vh;
+  width: 30vh;
   align-self: flex-start;
 }
 
@@ -351,6 +351,8 @@ h1 {
   grid-template-columns: repeat(4, 1rem);
 }
 
+.field_with_errors {display: inline-block };
+
 @media screen and (max-width: 768px) {
   .ham label {
     display: inline-block;
@@ -393,11 +395,13 @@ h1 {
     margin-top: 1rem;
   }
 
+
   .item_container {
     flex-direction: row;
     max-height: 3rem;
     margin-top: 0;
     align-self: auto;
+    width: 95%;
   }
 
   .item_icon {
