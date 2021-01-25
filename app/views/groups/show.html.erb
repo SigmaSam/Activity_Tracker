@@ -1,22 +1,16 @@
 <div class="information_area">
   <div class="items_area">
-  <%if @group.id > 1%> 
     <div class="item_container" id="item_show">   
       <%= image_tag @group.icon,class:"item_icon", onerror:"this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
       <h1 class="item_tittle"><%= @group.name %></h1>
       <p class="item_text"> Total Hours</p>
       <p class="item_text"><%= total_hours_group %></p>
     </div>
-    <%end%>
   </div>
   <div class="item_container" id="smallHourContainer">
     <p class="item_text"> Total Hours</p>
     <p class="item_text"><%= total_hours_group %></p>
   </div>
-
-  <h2 class="title_two">What did you Acomplish?</h2>
-
-  <%= render 'routines' %>
   <div class="user_routines">
     <div class="routine_container_one">
       <p>User</p>

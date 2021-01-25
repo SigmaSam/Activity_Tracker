@@ -22,7 +22,7 @@
     <% else %>
       <div class="home_container">
         <%= link_to "My Activities", user_path(current_user), class:"home_button"%>
-        <%= link_to "External Activities", group_path(1), class:"home_button"%>
+        <%= link_to "External Activities", routines_path, class:"home_button"%>
         <%= link_to "Groups", groups_path, class:"home_button"%>
         <%= link_to "Log Out", sessions_path,method: :delete, class:"home_button"%>
       </div>

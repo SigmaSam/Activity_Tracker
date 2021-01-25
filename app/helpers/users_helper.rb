@@ -22,4 +22,12 @@ module UsersHelper
     end
     sum
   end
+
+  def external_group(arg)
+    if arg.groups.empty?
+      'External'
+    else
+      arg.groups.last.name
+    end
+  end
 end

@@ -3,8 +3,8 @@ class Routine < ApplicationRecord
   validates :name, presence: true
 
   belongs_to :user
-  belongs_to :group
   has_many :bridges
+  has_many :groups, through: :bridges
 
   def group=(group)
     g = Group.find_by(name: group)

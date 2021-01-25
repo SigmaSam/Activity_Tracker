@@ -1,9 +1,11 @@
-  <%= form_for @group.routines.build do |f| %>
+  <%= form_for @routine.build do |f| %>
     <div class="routine_box">
-      <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.hidden_field :group_id, value: @group.id %>    
+      <%= f.hidden_field :user_id, value: current_user.id %> 
       <%= f.text_field :name,class:'routine_text',placeholder:'What did you do?' %>
       <%= f.text_field :hours, class:'routine_text',placeholder:'For how long?' %>
+      <%= f.collection_select(:group_ids, Group.all, :id, :name,:include_blank => 'None')%>
       <%= f.submit "Log an Activity", class: "routine_button" %>
     </div>
   <% end %>
+
+

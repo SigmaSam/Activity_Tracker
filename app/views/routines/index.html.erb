@@ -1,0 +1,20 @@
+<h2 class="title_two" id="top_title">External Routines</h2>
+
+<div class="information_area">
+  <div class="user_routines">
+    <div class="routine_container_one">
+      <p>User</p>
+      <p>Activity</p>
+      <p>Hours</p>
+    </div>
+
+    <div class="routine_container">
+
+      <% @routine.reverse.each do |f|%>    
+        <p><%= user_check(f)%></p>
+        <p><%= name_check(f)%></p>
+        <p><%= time_check(f)%></p>
+      <%end%>
+    </div>
+  </div>
+</div>

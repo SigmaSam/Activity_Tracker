@@ -1,9 +1,0 @@
-  <%= form_for @routine.create do |f| %>
-    <div class="routine_box">
-      <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.hidden_field :group_id, value: 1 %>    
-      <%= f.text_field :name,class:'routine_text',placeholder:'What did you do?' %>
-      <%= f.text_field :hours, class:'routine_text',placeholder:'For how long?' %>
-      <%= f.submit "Log an Activity", class: "routine_button" %>
-    </div>
-  <% end %>

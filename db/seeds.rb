@@ -6,19 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 users = User.create([{
-        name: 'Micronaut'
+        name: 'Emanuel'
     },
     { 
-        name: 'User' 
+        name: 'Carla' 
     },
     {
-        name: 'Admin'
+        name: 'Micronaut'
     }])
 
 groups = Group.create([{
-    name: 'External'
-},
-{
 
     name: 'Exercising',
     icon:'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic3.businessinsider.com%2Fimage%2F57a0b934dd08956a398b48a2-1200%2Fpeople-are-exercising-more-and-eating-healthier.jpg'
@@ -40,48 +37,55 @@ groups = Group.create([{
 routines = Routine.create([{
     name: 'Push Ups',
     hours: 1,
-    group_id: 2,
+    group_ids: 2,
     user_id: 1
 },
 {
     name: 'Paperwork',
     hours: 8,
-    group_id: 5,
+    group_ids: 4,
     user_id: 2 
 },
 {
     name: 'Jogging',
     hours: 4,
-    group_id: 2,
+    group_ids: 2,
     user_id: 2 
 },
 {
     name: 'Plank',
     hours: 5,
-    group_id: 2,
+    group_ids: 2,
     user_id: 2 
 },
 {
     name: 'Weight Lifting',
     hours: 4,
-    group_id: 2,
+    group_ids: 2,
     user_id: 3 
 },
 {
     name: 'Coding Challenges',
     hours: 1,
-    group_id: 3,
+    group_ids: 3,
     user_id: 2 
 },
 {
     name: 'Sleeping',
     hours: 8,
-    group_id: 1,
     user_id: 1 
 },
 {
     name: 'Spacing Out',
     hours: 2,
-    group_id: 1,
     user_id: 3 
+},
+{
+    name: 'Videogames',
+    hours: 2,
+    user_id: 3 
+},{
+    name: 'Reading light novels',
+    hours: 2,
+    user_id: 1 
 }])

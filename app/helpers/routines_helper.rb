@@ -1,8 +1,21 @@
 module RoutinesHelper
-  def group_check(routine)
-    return if routine.group.nil?
+  def user_check(routine)
+    routine.user.name.html_safe if routine.groups.empty?
+  end
 
-    image_tag(routine.group.icon, class: 'group__image',
-                                  onerror: 'this.error=null;this.src="https://picsum.photos/50/50?random=1"')
+  def name_check(routine)
+    routine.name.html_safe if routine.groups.empty?
+  end
+
+  def time_check(routine)
+    routine.hours.to_s.html_safe if routine.groups.empty?
+  end
+
+  def group_name(routine)
+    if routine.groups.last.nil?
+      'External'
+    else
+      routine.groups.last.name
+    end
   end
 end

@@ -22,19 +22,12 @@
       <p>Activity</p>
       <p>Hours</p>
     </div>
-
     <div class="routine_container">
 
       <% @user.routines.reverse.each do |f|%>
-        <% if f.group_id %>
-          <% if f.group_id > 1%>
-            <p class="routine_item"><%= f.group.name%></p>
-          <%else%>
-            <p class="routine_item">No group</p>
-          <%end%>
-          <p class="routine_item"><%= f.name%></p>
-          <p class="routine_item"><%= f.hours%></p>
-        <% end %>
+        <p class="routine_item"><%= external_group(f)%></p>
+        <p class="routine_item"><%= f.name%></p>
+        <p class="routine_item"><%= f.hours%></p>
       <%end%>
     </div>
   </div>

@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def show
     @groups = Group.all
     @user = User.find_by(id: params[:id])
-    @routines = @user.routines
+    @routine = Routine.all
   end
 
   private

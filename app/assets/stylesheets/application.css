@@ -194,6 +194,13 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 black;
 }
 
+.item_container a {
+  align-items: center;
+  font-family: 'Proxima_Nova_Light', sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
 .item_icon {
   width: 90%;
   height: auto;
@@ -268,10 +275,14 @@ body {
   grid-template-columns: repeat(3, 1rem);
   grid-template-rows: repeat(3, auto);
   justify-content: space-around;
+  width: 100%;
   background: #edefee;
   font-family: 'Proxima_Nova_Light', sans-serif;
-  font-weight: bold;
   border-bottom: 3px solid #41403c;
+}
+
+.routine_container p {
+  margin-left: -1rem;
 }
 
 .routine_item {
@@ -383,6 +394,10 @@ h1 {
   grid-template-columns: repeat(4, 1rem);
 }
 
+#routine_group_ids {
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .ham {
     position: fixed;
@@ -449,17 +464,15 @@ h1 {
     border-bottom: 0.2rem solid #3778c2;
   }
 
-  .item_info a {
+  .item_info {
     border-top: none;
+    display: none;
   }
 
-  .item_info h2 {
+  .item_info a {
     border-bottom: 0.2rem solid #3778c2;
     font-size: 1rem;
-  }
-
-  .item_info p {
-    display: none;
+    display: contents;
   }
 
   .create_button {
@@ -478,6 +491,14 @@ h1 {
 
   .title_two {
     font-size: 1rem;
+  }
+
+  .item_container a {
+    align-items: center;
+    font-family: 'Proxima_Nova_Light', sans-serif;
+    text-decoration: none;
+    color: black;
+    border: none;
   }
 
   #top_title {

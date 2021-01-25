@@ -13,6 +13,8 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.create(routine_params)
+    @routine.group = params[:group_ids]
+
     if @routine.save
       redirect_to groups_path, notice: 'Your activity was loged!, keep working hard!'
     else
@@ -20,9 +22,14 @@ class RoutinesController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.all
+    @routine = Routine.all
+  end
+
   private
 
   def routine_params
-    params.require(:routine).permit(:name, :hours, :user_id, :group_id)
+    params.require(:routine).permit(:name, :hours, :user_id, :group_ids)
   end
 end
