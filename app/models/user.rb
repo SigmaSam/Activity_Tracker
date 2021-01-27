@@ -4,4 +4,5 @@ class User < ApplicationRecord
 
   has_many :routines, foreign_key: :user_id, dependent: :destroy
   has_many :groups, through: :routines
+  has_one_attached :avatar
 end

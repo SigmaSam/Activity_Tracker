@@ -8,6 +8,7 @@
   <%=form_with(model:@user,local:true) do |f|%>
     <div class="input_container">
       <%=f.text_field :name,autofocus:true,placeholder:"Your name here",class:'input_area' %>
+      <%= f.file_field :avatar %>
       <%=f.submit "Sign Up", class:'input_button'%>
     </div>
   <%end%>
