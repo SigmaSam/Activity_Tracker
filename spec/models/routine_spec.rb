@@ -7,7 +7,7 @@ RSpec.describe Routine, type: :model do
   let!(:test_group) { Group.create(name: 'testgroup') }
   let!(:test_routine) do
     Routine.create(user_id: test_user.id, name: 'test_routine', hours: 13)
-  end 
+  end
   let!(:test_routine1) { Routine.create(user_id: nil, name: 'test_routine1', hours: 13) }
 
   it 'Does create the item when all params are given' do

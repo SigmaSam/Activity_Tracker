@@ -1,0 +1,51 @@
+.routine_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vh;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.routine_text {
+  font-family: 'Proxima_Nova_Light', sans-serif;
+  text-align: center;
+}
+
+.routine_button {
+  background-color: #3778c2;
+  font-family: 'Proxima_Nova_Light', sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.routine_container_one {
+  display: flex;
+  justify-content: space-around;
+  background: #edefee;
+  font-family: 'Proxima_Nova_Light', sans-serif;
+  font-weight: bold;
+  border-bottom: 0.2rem solid #41403c;
+}
+
+.routine_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1rem);
+  grid-template-rows: repeat(3, auto);
+  justify-content: space-around;
+  width: 100%;
+  background: #edefee;
+  font-family: 'Proxima_Nova_Light', sans-serif;
+  border-bottom: 3px solid #41403c;
+}
+
+.routine_container p {
+  margin-left: -1rem;
+}
+
+.routine_item {
+  justify-self: center;
+  border-bottom: 0.2rem solid #3778c2;
+  border-width: 5px;
+}

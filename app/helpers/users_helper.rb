@@ -1,3 +1,4 @@
+# rubocop:disable Style/GuardClause
 module UsersHelper
   def total_hours_group
     sum = 0
@@ -30,4 +31,12 @@ module UsersHelper
       arg.groups.last.name
     end
   end
+
+  def avatar(arg)
+    if arg.avatar.attached?
+      (image_tag current_user.avatar, class: 'item_icon',
+                                      onerror: "this.error=null;this.src='").html_safe
+    end
+  end
 end
+# rubocop:enable Style/GuardClause

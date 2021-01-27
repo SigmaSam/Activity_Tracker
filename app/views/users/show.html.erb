@@ -1,7 +1,7 @@
 <div class="information_area">
   <div class="user_info_area">
     <div class="user_container" >
-      <%= image_tag current_user.avatar,class:"item_icon",onerror:"this.error=null;this.src='https://myplantationdentist.com/wp-content/uploads/2016/10/blank_profile_female.jpg'"%>
+      <%= avatar(current_user)%>
 
       <h1 class=""> <%= current_user.name %> </h1>
       <p>Total time spend in all activities.</p>
