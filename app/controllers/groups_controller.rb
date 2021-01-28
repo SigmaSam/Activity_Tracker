@@ -43,7 +43,7 @@ class GroupsController < ApplicationController
     @group.update(group_params)
 
     flash.notice = "Group '#{@group.name}' was Updated!"
-    
+
     redirect_to group_path(@group)
   end
 

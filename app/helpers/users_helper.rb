@@ -1,4 +1,4 @@
-# rubocop:disable Style/GuardClause
+# rubocop:disable Layout/LineLength
 module UsersHelper
   def total_hours_group
     sum = 0
@@ -36,8 +36,8 @@ module UsersHelper
     if arg.avatar.attached?
       ((image_tag current_user.avatar.variant(resize_to_limit: [100, 100]))).html_safe
     else
-      (image_tag 'http://2.bp.blogspot.com/-BVgTOe82aaI/VZln4Ny-LPI/AAAAAAAAA6Y/hKchnruxKtg/s1600/2000px-User_icon_2.svg.png', size:'200x200').html_safe
+      (image_tag 'http://2.bp.blogspot.com/-BVgTOe82aaI/VZln4Ny-LPI/AAAAAAAAA6Y/hKchnruxKtg/s1600/2000px-User_icon_2.svg.png', size: '200x200').html_safe
     end
   end
 end
-# rubocop:enable Style/GuardClause
+# rubocop:enable Layout/LineLength
