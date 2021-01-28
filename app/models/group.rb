@@ -1,9 +1,11 @@
 # rubocop:disable Layout/LineLength
 class Group < ApplicationRecord
+  has_one_attached :icon
+  
   validates :name, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z\s]+\z/, message: 'Only letters are allowed' }, length: { in: 3..30 }
-  validates :icon, format: { with: /.+\.(jpe?g|png)\z/, message: 'only Allows JPEG,JPG and PNG pictures are allowed.' }, allow_blank: true
 
   has_many :bridges
   has_many :routines, through: :bridges
+  
 end
 # rubocop:enable Layout/LineLength

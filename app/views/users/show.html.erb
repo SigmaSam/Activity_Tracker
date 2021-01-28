@@ -1,8 +1,6 @@
 <div class="information_area">
   <div class="user_info_area">
     <div class="user_container" >
-      <%= avatar(current_user)%>
-
       <h1 class=""> <%= current_user.name %> </h1>
       <p>Total time spend in all activities.</p>
       <p><%= total_hours_user %></p>
@@ -22,13 +20,17 @@
       <p>Group</p>
       <p>Activity</p>
       <p>Hours</p>
+      <p>Options</p>
     </div>
-    <div class="routine_container">
-
+    <div class="routine_container" id='user_view_routines'>
       <% @user.routines.reverse.each do |f|%>
         <p class="routine_item"><%= external_group(f)%></p>
         <p class="routine_item"><%= f.name%></p>
         <p class="routine_item"><%= f.hours%></p>
+        <div class="routine_item" id='routine_options'>
+          <%= link_to 'Edit', edit_routine_path(f), class: 'routine_link'%>
+          <%= link_to 'Delete', routine_path(f),class: 'routine_link', method: :delete, data: {confirm: "Are you sure about deleting the activity?"} %> &nbsp;
+        </div>    
       <%end%>
     </div>
   </div>

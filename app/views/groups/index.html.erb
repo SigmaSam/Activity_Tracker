@@ -9,7 +9,7 @@
   <div class="items_area">
     <%@group.each do |g|%>
       <div class="item_container">
-        <%= image_tag g.icon,class:"item_icon", onerror:"this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
+        <%= icon(g)%>
         <h2><%=link_to g.name, group_path(g)%></h2>
         <div class="item_info"> 
           <%= link_to group_path(g) do%>

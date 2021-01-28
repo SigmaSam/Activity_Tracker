@@ -109,6 +109,10 @@ body {
   font-size: 2rem;
 }
 
+.home_container img {
+  border-radius: 50%;
+}
+
 .input_container {
   background: #edefee;
   border: 0.1rem solid #3778c2;
@@ -182,11 +186,6 @@ body {
   background-color: #edefee;
   font-family: 'Proxima_Nova_Light', sans-serif;
   border-bottom: 1rem solid #3778c2;
-}
-
-.user_container,
-img {
-  width: 40%;
 }
 
 .user_container,

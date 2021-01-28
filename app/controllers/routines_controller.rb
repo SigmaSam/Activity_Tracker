@@ -27,6 +27,28 @@ class RoutinesController < ApplicationController
     @routine = Routine.all
   end
 
+  def destroy
+    @routine = Routine.find(params[:id])
+    @routine.destroy
+
+    flash.notice = "Routine '#{@routine.name}' was Deleted!"
+
+    redirect_to groups_path
+  end
+
+  def edit
+    @routine = Routine.find(params[:id])
+  end
+
+  def update
+    @routine = Routine.find(params[:id])
+    @routine.update(routine_params)
+
+    flash.notice = "Routine '#{@routine.name}' was Updated!"
+
+    redirect_to user_path(current_user)
+  end
+
   private
 
   def routine_params

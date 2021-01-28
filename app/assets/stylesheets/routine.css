@@ -27,6 +27,7 @@
   font-family: 'Proxima_Nova_Light', sans-serif;
   font-weight: bold;
   border-bottom: 0.2rem solid #41403c;
+  margin-left: -2%;
 }
 
 .routine_container {
@@ -38,6 +39,7 @@
   background: #edefee;
   font-family: 'Proxima_Nova_Light', sans-serif;
   border-bottom: 3px solid #41403c;
+  align-items: center;
 }
 
 .routine_container p {
@@ -48,4 +50,5 @@
   justify-self: center;
   border-bottom: 0.2rem solid #3778c2;
   border-width: 5px;
+  align-items: center;
 }
