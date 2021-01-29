@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:name] = @user.name
       redirect_to groups_path, notice: 'Welcome to the party!'
     else
-      redirect_to new_user_path, notice: 'Not a valid name'
+      redirect_to new_user_path, notice: @user.errors.full_messages
     end
   end
 

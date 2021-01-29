@@ -4,7 +4,7 @@ class Routine < ApplicationRecord
 
   belongs_to :user
   has_many :bridges
-  has_many :groups, through: :bridges
+  has_many :groups, through: :bridges, dependent: :destroy
 
   def group=(group)
     g = Group.find_by(name: group)

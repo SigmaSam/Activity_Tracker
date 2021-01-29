@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path, notice: 'Group sucessfully created'
     else
-      render :new
+      render :new, notice: @group.errors.full_messages
     end
   end
 

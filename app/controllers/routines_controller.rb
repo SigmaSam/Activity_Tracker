@@ -18,7 +18,7 @@ class RoutinesController < ApplicationController
     if @routine.save
       redirect_to groups_path, notice: 'Your activity was loged!, keep working hard!'
     else
-      redirect_to groups_path, notice: 'Your activity was not loged!'
+      redirect_to groups_path, notice: @routine.errors.full_messages
     end
   end
 

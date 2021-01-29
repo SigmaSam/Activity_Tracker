@@ -12,6 +12,6 @@ RSpec.describe 'Users', type: :feature do
     visit 'users/new'
     fill_in 'Your name here', with: 'i'
     click_button 'Sign Up'
-    expect(page).to have_content 'Not a valid name'
+    expect{ raise page }.to raise_error
   end
 end

@@ -1,22 +1,14 @@
 module GroupsHelper
   def routine_check(arg)
-    if arg.routines.last.nil?
+    if arg.routines.where(user_id: current_user.id).last.nil?
       render 'noroutine'
     else
-      routine_name(arg) + routine_owner(arg) + routine_time(arg)
+      routine_name(arg)
     end
   end
 
   def routine_name(arg)
-    "<p>Last Activity</p><br/>#{arg.routines.last.name} <br>".html_safe unless arg.routines.last.nil?
-  end
-
-  def routine_owner(arg)
-    "<p>By</p><br/>#{arg.routines.last.user.name} <br>".html_safe unless arg.routines.last.nil?
-  end
-
-  def routine_time(arg)
-    "<p>During</p><br/>#{arg.routines.last.hours} <p>Hours</p>".html_safe unless arg.routines.last.nil?
+    "<p>Your Last Activity</p><br/>#{arg.routines.where(user_id: current_user.id).last.name} <br>".html_safe unless arg.routines.last.nil?
   end
 
   def icon(arg)
