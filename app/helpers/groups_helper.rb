@@ -7,9 +7,13 @@ module GroupsHelper
     end
   end
 
+  # rubocop: disable Style/GuardClause
   def routine_name(arg)
-    "<p>Your Last Activity</p><br/>#{arg.routines.where(user_id: current_user.id).last.name} <br>".html_safe unless arg.routines.last.nil?
+    if arg.routines.last.nil?
+      "<p>Your Last Activity</p><br/>#{arg.routines.where(user_id: current_user.id).last.name} <br>".html_safe
+    end
   end
+  # rubocop: enable Style/GuardClause
 
   def icon(arg)
     if arg.icon.attached?

@@ -9,6 +9,6 @@ RSpec.describe User, type: :model do
     expect(test_user).to be_valid
   end
   it 'does not create user if the name is too short' do
-    expect{ raise test_user1 }.to raise_error
+    expect { raise test_user1 }.to raise_error
   end
 end
