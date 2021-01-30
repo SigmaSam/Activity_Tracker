@@ -1,0 +1,22 @@
+<h1 class="title_two" id="top_title"> Available Groups </h1>
+<div class='information_area'>
+  <%= link_to 'Create New Group', new_group_path, class:'create_button', id:'option_link' %>
+  <div class="items_area">
+    <%@group.each do |g|%>
+      <div class="item_container">
+        <%= icon(g)%>
+        <h2><%=link_to g.name, group_path(g)%></h2>
+        <div class="item_info"> 
+          <%= link_to group_path(g) do%>
+            <p><%= routine_check(g)%></p>
+            <p>Group Created at <%=g.created_at.to_date%></p> </p>        
+          <%end%>
+      </div>        
+    </div>
+  <%end%>  
+</div>    
+   
+  <h2 class="title_two">Track an Activity</h2>
+
+  <%= render 'routines' %>
+

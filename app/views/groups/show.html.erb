@@ -1,0 +1,31 @@
+<div class="information_area">
+  <div class="items_area">
+    <div class="item_container" id="item_show">   
+      <%= icon(@group)%>
+      <h1 class="item_tittle"><%= @group.name %></h1>
+      <p class="item_text"> Total Hours</p>
+      <p class="item_text"><%= total_hours_group %></p>
+    </div>
+  </div>
+  <%= link_to 'Edit', edit_group_path(@group), class: 'create_button' , id:'edit_button'%>      
+  <div class="item_container" id="smallHourContainer">
+    <p class="item_text"> Total Hours</p>
+    <p class="item_text"><%= total_hours_group %></p>
+  </div>
+  <div class="user_routines">
+    <div class="routine_container_one">
+      <p>User</p>
+      <p>Activity</p>
+      <p>Hours</p>
+    </div>
+
+    <div class="routine_container">
+
+      <% @group.routines.reverse.each do |f|%>
+          <p class="routine_item"><%= f.user.name%></p>
+          <p class="routine_item"><%= f.name%></p>
+          <p class="routine_item"><%= f.hours%></p>
+      <%end%>
+    </div>
+  </div>
+</div>
