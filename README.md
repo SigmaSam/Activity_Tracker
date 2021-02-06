@@ -1,10 +1,7 @@
 # Group our transations.
 This project is a simple app built using basic Ruby on Rails functionalities in this app you can create an account, and when logged in, you will be able to  build groups and routines and keep track of them.
 
-
 ![screenshot](app/assets/images/Index.png)
-### Presentation on video
-[Video](https://agile-depths-52362.herokuapp.com/)
 ### Built with
 - Ruby v2.7.0
 - Ruby on Rails 6.0.3.4
