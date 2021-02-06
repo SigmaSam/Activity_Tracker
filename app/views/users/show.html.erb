@@ -1,0 +1,37 @@
+<div class="information_area">
+  <div class="user_info_area">
+    <div class="user_container" >
+      <h1 class=""> <%= current_user.name %> </h1>
+      <p>Total time spend in all activities.</p>
+      <p><%= total_hours_user %></p>
+    </div>
+    <div class="user_container" >
+
+      <% @groups.each do |g| %>
+      <% if g.routines.find_by(user_id: current_user.id) && g.id != 1%>
+        <p class="group_name"> Total time Spend <%= g.name %> </p>
+          <%= total_hours_each(g) %>
+        <%end%>    
+      <%end%>
+    </div>
+  </div>
+  <div class="user_routines" id='user_show'>
+    <div class="routine_container_one">
+      <p>Group</p>
+      <p>Activity</p>
+      <p>Hours</p>
+      <p>Options</p>
+    </div>
+    <div class="routine_container" id='user_view_routines'>
+      <% @user.routines.reverse.each do |f|%>
+        <p class="routine_item"><%= external_group(f)%></p>
+        <p class="routine_item"><%= f.name%></p>
+        <p class="routine_item"><%= f.hours%></p>
+        <div class="routine_item" id='routine_options'>
+          <%= link_to 'Edit', edit_routine_path(f), class: 'routine_link'%>
+          <%= link_to 'Delete', routine_path(f),class: 'routine_link', method: :delete, data: {confirm: "Are you sure about deleting the activity?"} %> &nbsp;
+        </div>    
+      <%end%>
+    </div>
+  </div>
+</div>

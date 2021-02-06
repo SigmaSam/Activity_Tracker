@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Activity Tracker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" %>
+  </head>
+
+  <body>  
+  <%=render "shared/errors" %>
+  <nav class="ham">
+  <label for="hamburger">&#9776;</label>
+  <input type="checkbox" id="hamburger"/>
+      <div class="home_container">
+        <%= logged_in?%>
+      </div>
+  </nav>
+
+    <%= yield %>
+  </body>
+</html>
